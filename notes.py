@@ -31,6 +31,72 @@ choices = get_choices()
 result = check_win(choices['player'], choices['computer'])
 print(result)
 
+OR an alternative method could be the following:
+
+import random
+
+starter = input("Would you like to play rock, paper, scissors? Please answer Yes or No. ")
+
+if starter.lower() == "yes":
+    starter2 = input("Would you like to pick rock, paper or scissors? ")
+    if starter2.lower() == "rock":
+        value = random.randint(1, 3)
+        if value < 2:
+            mode = "rock"
+        if value < 2:
+            print(f"You picked {starter2} and the computer picked {mode}.")
+            quit()
+        if value == 2:
+            mode = "paper"
+        if value == 2:
+            print(f"You picked {starter2} and the computer picked {mode}.")
+            quit()
+        if value > 2:
+            mode = "scissors"
+        if value > 2:
+            print(f"You picked {starter2} and the computer picked {mode}.")
+            quit()
+    if starter2.lower() == "paper":
+        value = random.randint(1, 3)
+        if value < 2:
+            mode = "rock"
+        if value < 2:
+            print(f"You picked {starter2} and the computer picked {mode}.")
+            quit()
+        if  value == 2:
+            mode = "paper"
+        if  value == 2:
+            print(f"You picked {starter2} and the computer picked {mode}.")
+            quit()
+        if value > 2:
+            mode = "scissors"
+        if value > 2:
+            print(f"You picked {starter2} and the computer picked {mode}.")
+            quit()
+    if starter2.lower() == "scissors":
+        value = random.randint(1, 3)
+        if value < 2:
+            mode = "rock"
+        if value < 2:
+            print(f"You picked {starter2} and the computer picked {mode}.")
+            quit()
+        if  value == 2:
+            mode = "paper"
+        if  value == 2:
+            print(f"You picked {starter2} and the computer picked {mode}.")
+            quit()
+        if value > 2:
+            mode = "scissors"
+        if value > 2:
+            print(f"You picked {starter2} and the computer picked {mode}.")
+            quit()
+
+elif starter.lower() == "no":
+    print("See you later! Feel free to revisit us anytime!")
+    exit()
+
+else:
+    print("Unfortunately, an error has occured. Please try again soon!")
 
 
  
